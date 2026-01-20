@@ -3,6 +3,9 @@
   <name>Build</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="\artifacts" />
+    </options>
     <build-runners>
       <runner id="Maven2" name="Maven branch step - tests" type="Maven2">
         <conditions>

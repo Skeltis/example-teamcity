@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="\artifacts" />
+      <option name="artifactRules" value="artifacts/*.jar" />
     </options>
     <build-runners>
       <runner id="Maven2" name="Maven branch step - tests" type="Maven2">

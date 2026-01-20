@@ -3,14 +3,13 @@
   <name>https://github.com/Skeltis/example-teamcity.git#refs/heads/master</name>
   <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
   <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
-  <param name="authMethod" value="PASSWORD" />
+  <param name="authMethod" value="TEAMCITY_SSH_KEY" />
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
-  <param name="secure:password" value="credentialsJSON:91a27413-c04e-41bf-b0d5-9fe85c1bd604" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec" value="refs/heads/*" />
   <param name="teamcitySshKey" value="ssh-key-1768067739593" />
-  <param name="url" value="https://github.com/Skeltis/example-teamcity.git" />
+  <param name="url" value="git@github.com:Skeltis/example-teamcity.git" />
   <param name="useAlternates" value="AUTO" />
   <param name="usernameStyle" value="USERID" />
 </vcs-root>

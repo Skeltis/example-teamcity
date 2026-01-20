@@ -2,7 +2,7 @@
 
 ## Подготовка к выполнению
 
-![virtual machines](.\img\01_vms.jpg)
+![virtual machines](./img/01_vms.jpg)
 
 ## Основная часть
 
@@ -13,11 +13,11 @@ https://github.com/Skeltis/example-teamcity
 2. Сделайте autodetect конфигурации.
 3. Сохраните необходимые шаги, запустите первую сборку master.
 
-![init builds](.\img\04_initbuilds.jpg)
+![init builds](./img/04_initbuilds.jpg)
 
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
 
-![build steps](.\img\03_steps.jpg)
+![build steps](./img/03_steps.jpg)
 
 Я воспользовался примером из лекции, но вообще не стал бы настраивать проверку ветки по "contains", т.к. основная ветка может быть и `main`, а ветка с кодом запросто называться как-нибудь `bugfix/fix-maintenance-filter` и будет ложное срабатывание.
 
@@ -26,7 +26,7 @@ https://github.com/Skeltis/example-teamcity
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
 8. Мигрируйте `build configuration` в репозиторий.
 
-![migrate](.\img\05_migrate.jpg)
+![migrate](./img/05_migrate.jpg)
 
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
@@ -34,11 +34,11 @@ https://github.com/Skeltis/example-teamcity
 12. Сделайте push всех изменений в новую ветку репозитория.
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
 
-![branch](.\img\06_branch.jpg)
+![branch](./img/06_branch.jpg)
 
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 
-![builds](.\img\07_builds.jpg)
+![builds](./img/07_builds.jpg)
 
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
@@ -46,16 +46,16 @@ https://github.com/Skeltis/example-teamcity
 Добавил в конфигурации билда `Artifact paths: target/*.jar`
 не заскринил саму конфигурацию, к сожалению
 
-![builds](.\img\08_target_jar.jpg)
+![builds](./img/08_target_jar.jpg)
 
 упавшие билды и те, что были почищены - коммиты без апдейта версии и моя борьба за использование апи токена nexus'а вместо логина\пароля, но последнее решил всё-таки не заморачивать. Хотя так было бы правильнее.
 
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
 
-![artifacts](.\img\09_artifacts.jpg)
+![artifacts](./img/09_artifacts.jpg)
 
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
 
-![nexus](.\img\10_builds.jpg)
+![nexus](./img/10_builds.jpg)
 
 19. В ответе пришлите ссылку на репозиторий.
